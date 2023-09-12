@@ -2,7 +2,7 @@
 
 This little lib allows the addition a of dev.json configuration file in the .vscode folder.
  
-The lib reads configuration data from `./.vscode/dev.json`.
+The lib reads configuration data from `/.vscode/dev.json`.
 
 If a dev.json file is not found, a default file is created in the /.vscode folder
 
