@@ -2,16 +2,16 @@
 import { join } from "https://deno.land/std@0.201.0/path/mod.ts";
 
 export type Config = {
-   FileName?: string
-   TargetFolder?: string,
-   BuildTarget?: string
-   Watch?: string
-   Port?: number
-   HotPort?: number
-   CWD?: string
-   Out?: string
-   Entry?: string[]
-   Minify?: boolean
+   FileName?: string       /* the name of a file to run */
+   TargetFolder?: string   /* the folder to run or serve from */
+   BuildTarget?: string    /* the folder to place the build bundle in */
+   Watch?: string          /* a folder to watch for changes in. (to trigger a build) */
+   Port?: number           /* a port number for the server or a service to use*/
+   HotPort?: number        /* the SSE port number for HotServer to use */
+   CWD?: string            /* current working directory */
+   Out?: string            /* the file name for the esBuild output */
+   Entry?: string[]        /* an array of entry files to start esBuild from */
+   Minify?: boolean        /* minify the esbuild bundle? */
 }
 
 /** The full path for the dev.json configuration file */
