@@ -9,7 +9,6 @@ export type Config = {
    Port?: number           /* a port number for the server or a service to use*/
    HotPort?: number        /* the SSE port number for HotServer to use */
    CWD?: string            /* current working directory */
-   Out?: string            /* the file name for the esBuild output */
    Entry?: string[]        /* an array of entry files to start esBuild from */
    Minify?: boolean        /* minify the esbuild bundle? */
 }
