@@ -3,7 +3,8 @@ import { join } from "https://deno.land/std@0.201.0/path/mod.ts";
 
 export type Config = {
    FileName?: string       /* the name of a file to run */
-   TargetFolder?: string   /* the folder to run or serve from */
+   TargetFolder?: string   /* the folder to run from */
+   ServeFolder?: string    /* the folder to serve index.html from */
    BuildTarget?: string    /* the folder to place the build bundle in */
    Watch?: string          /* a folder to watch for changes in. (to trigger a build) */
    Port?: number           /* a port number for the server or a service to use*/
@@ -19,6 +20,7 @@ const CfgFilePath = "./.vscode/dev.json"
 /** A default configuration file */
 export const DefaultCFG = {
    FileName: "mod.ts",
+   ServeFolder: "./",
    BuildTarget: "dist",
    Watch: "src",
    Port: 80,
