@@ -1,5 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
-import { join } from "https://deno.land/std@0.201.0/path/mod.ts";
+import { join } from "https://deno.land/std@0.208.0/path/mod.ts";
 
 export type Config = {
    FileName?: string       /* the name of a file to run */
@@ -10,6 +10,7 @@ export type Config = {
    Port?: number           /* a port number for the server or a service to use*/
    HotPort?: number        /* the SSE port number for HotServer to use */
    CWD?: string            /* current working directory */
+   Out?: string            /* esbuild outfile */
    Entry?: string[]        /* an array of entry files to start esBuild from */
    Minify?: boolean        /* minify the esbuild bundle? */
 }
